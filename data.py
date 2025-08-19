@@ -35,8 +35,7 @@ class ResponseBody:
     INGREDIENTS_NOT_TRANSFER = {"success": False,"message": "Ingredient ids must be provided"} #400 Bad Request
 
 class OrderIngredients:
-    create_order_variants = [
-        (['61c0c5a71d1f82001bdaaa6d', '61c0c5a71d1f82001bdaaa6f', '61c0c5a71d1f82001bdaaa72'], 200),  # с ингредиентами
-        ([], 400),  # без ингредиентов
-        (['61c0c5a71d1f82001bdbbb6f'], 500)  # c неверным хешем ингредиентов
-    ]
+    INGREDIENTS = {"ingredients":["61c0c5a71d1f82001bdaaa6d", "61c0c5a71d1f82001bdaaa6f", "61c0c5a71d1f82001bdaaa72"]}  # с ингредиентами
+    NO_INGREDIENTS = {"ingredients":[]}  # без ингредиентов
+    BAD_HASH_INGREDIENT = {"ingredients":["123"]}  # c неверным хешем ингредиентов
+
